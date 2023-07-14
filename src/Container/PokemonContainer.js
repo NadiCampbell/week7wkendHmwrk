@@ -42,7 +42,18 @@ const PokemonContainer = () => {
         })}
        </select><br></br>
 
-      { response && "chosen:" + JSON.stringify(response.abilities)}
+        {response && (
+            <>
+            <p>special abilities:</p>
+            <ul>
+                {response.abilities.map((y) => <li>{y?.ability?.name}</li>)}
+                <hr></hr>
+                
+
+            </ul>
+            
+            </>
+        )}
        </>
     )
 
