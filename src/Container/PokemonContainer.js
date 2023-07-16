@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'; 
+import PokemonDetails from '../Components/PokemonDetails'
 
 
 const PokemonContainer = () => {
@@ -36,23 +37,14 @@ const PokemonContainer = () => {
     return (
         <>
        <select onChange={(e) => setChosenPokemon(e.target.value)}>
-       <option>Pick A Pokemon</option>
+       <option>Pick A Pokémon</option>
         {pokemon.results?.map((x, index) => {
             return <option key={index}>{x.name}</option>
         })}
        </select><br></br>
 
         {response && (
-            <>
-            <p>special abilities:</p>
-            <ul>
-                {response.abilities.map((y) => <li>{y?.ability?.name}</li>)}
-                <hr></hr>
-                
-
-            </ul>
-            
-            </>
+            <PokemonDetails response={response} chosenPokemon={chosenPokemon}/>
         )}
        </>
     )

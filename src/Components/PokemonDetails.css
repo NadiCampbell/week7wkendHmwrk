@@ -1,0 +1,16 @@
+.li-style {
+    list-style: none;
+    text-align: center;
+}
+
+.spc-abl {
+    text-align: center;
+}
+
+.hr {
+    width: 25%;
+}
+
+ul {
+    padding: 0;
+}
