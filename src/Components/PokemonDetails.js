@@ -6,8 +6,8 @@ const PokemonDetails = ({response, chosenPokemon}) => {
     const [favouritePokemon, setFavouritePokemon] = useState([]);
 
     const handleAddToFavourites = () => {
-        const alreadyAdded = favouritePokemon.find((x)=> {
-           return x === chosenPokemon
+        const alreadyAdded = favouritePokemon.find((item)=> {
+           return item === chosenPokemon
         })
         if (!alreadyAdded){
             setFavouritePokemon((previousState)=> {
