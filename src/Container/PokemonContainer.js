@@ -46,6 +46,7 @@ const PokemonContainer = () => {
         {response && (
             <PokemonDetails response={response} chosenPokemon={chosenPokemon}/>
         )}
+        
        </>
     )
 

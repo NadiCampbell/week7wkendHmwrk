@@ -35,6 +35,7 @@ const PokemonDetails = ({response, chosenPokemon}) => {
         <button onClick={handleAddToFavourites}>Add To Favourites</button>
         <p>Favourite Pokémon:</p>
         {favouritePokemon.map((fav, index) => <li key={index}>{fav}</li>)}
+        
 
         </>
     )
